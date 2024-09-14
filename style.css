@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    font-family: 'Arial', sans-serif; /* Assuming Arial, adjust as needed */
+    background-color: #EDF2F7; /* Light grey background */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,31 +9,38 @@ body {
 }
 
 .signup-container {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    padding: 20px;
-    width: 500px;
+    background-color: #FFFFFF; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    padding: 40px;
+    width: 500px; /* Adjust width for your needs */
 }
 
 .tabs {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Center tabs */
     margin-bottom: 20px;
 }
 
 .tab {
-    background: none;
-    border: none;
-    outline: none;
-    cursor: pointer;
     font-size: 16px;
-    color: #333;
+    color: #A0AEC0; /* Grey color for text */
+    margin-right: 20px; /* Space between tabs */
+    padding-bottom: 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent; /* Invisible border for spacing */
+    transition: color 0.3s, border-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.tab:hover, .tab.active {
+    color: #4A5568; /* Darker grey on hover and for active tab */
+    border-bottom: 2px solid #4A5568; /* Underline effect for active/hover tab */
 }
 
 .form-container h1 {
     text-align: center;
-    color: #333;
+    color: #2D3748; /* Dark grey color for text */
+    margin-bottom: 20px;
 }
 
 form {
@@ -44,30 +51,35 @@ form {
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    padding: 12px 15px; /* Adequate padding inside input fields */
+    margin-bottom: 10px; /* Space between input fields */
+    border: 2px solid #E2E8F0; /* Light grey border */
+    border-radius: 5px; /* Slightly rounded corners for input fields */
+    font-size: 16px; /* Comfortable font size for reading */
 }
 
 button {
-    background-color: #555;
+    background-color: #2B6CB0; /* Blue background */
     color: white;
-    padding: 10px;
+    padding: 12px 15px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px; /* Matching font size with inputs */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
 }
 
 button:hover {
-    background-color: #333;
+    background-color: #2C5282; /* Darker blue on hover */
 }
 
 p {
     text-align: center;
     font-size: 14px;
+    margin-top: 20px; /* Space above the login link */
 }
 
 a {
-    color: blue;
+    color: #3182CE; /* Link color */
+    text-decoration: none; /* No underline */
 }
