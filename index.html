@@ -1,24 +1,30 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YUSUR Registration</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .form-container { display: none; } /* Hide all forms by default */
+        .form-container.active { display: block; } /* Show the active form */
+    </style>
 </head>
 <body>
     <div class="signup-container">
+        <h1>YUSUR</h1>
         <div class="tabs">
-            <button class="tab active">Student</button>
-            <button class="tab">University</button>
-            <button class="tab">Employer</button>
+            <button class="tab active" onclick="showForm('Student')">Student</button>
+            <button class="tab" onclick="showForm('University')">University</button>
+            <button class="tab" onclick="showForm('Employer')">Employer</button>
         </div>
-        <div class="form-container">
-            <h1>YUSUR</h1>
+        
+        <!-- Student Form -->
+        <div id="student" class="form-container active">
             <form>
                 <input type="text" placeholder="First Name" required>
                 <input type="text" placeholder="Last Name" required>
-                <input type="text" placeholder="University Name">
+                <input type="email" placeholder="University Name" required>
                 <input type="email" placeholder="University Email" required>
                 <input type="password" placeholder="Password" required>
                 <input type="password" placeholder="Confirm Password" required>
@@ -26,6 +32,36 @@
             </form>
             <p>Already have an account? <a href="#">Log in</a></p>
         </div>
+        
+        <!-- University Form -->
+        <div id="university" class="form-container">
+            <form>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="text" placeholder="University Name" required>
+                <input type="email" placeholder="University Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
+
+        <!-- Employer Form -->
+        <div id="employer" class="form-container">
+            <form>
+                <input type="text" placeholder="First Name" required>
+                <input type="text" placeholder="Last Name" required>
+                <input type="text" placeholder="Company Name" required>
+                <input type="email" placeholder="Company Email" required>
+                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Confirm Password" required>
+                <button type="submit">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </div>
     </div>
+
+    <script src ="script.js"></script>
 </body>
 </html>

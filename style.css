@@ -4,8 +4,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove any margin around the body */
 }
 
 .signup-container {
@@ -13,12 +13,20 @@ body {
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
     padding: 40px;
-    width: 500px; /* Adjust width for your needs */
+    width: 500px; /* Fixed width */
+    max-width: 90%; /* Ensure responsiveness on smaller screens */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+h1 {
+    margin: 0 auto 20px auto; /* Spacing below the heading */
+    font-size: 2rem; /* Adjust font size */
+    text-align: center; /* Center the heading */
 }
 
 .tabs {
     display: flex;
-    justify-content: center; /* Center tabs */
+    justify-content: center; /* Center the tabs */
     margin-bottom: 20px;
 }
 
@@ -82,4 +90,8 @@ p {
 a {
     color: #3182CE; /* Link color */
     text-decoration: none; /* No underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
 }
